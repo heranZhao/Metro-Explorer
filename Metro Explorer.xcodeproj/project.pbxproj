@@ -12,6 +12,19 @@
 		137505BB21A0C5EB00AD7816 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137505B921A0C5EB00AD7816 /* Main.storyboard */; };
 		137505BD21A0C5EE00AD7816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 137505BC21A0C5EE00AD7816 /* Assets.xcassets */; };
 		137505C021A0C5EE00AD7816 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137505BE21A0C5EE00AD7816 /* LaunchScreen.storyboard */; };
+		137505D121A4A6AE00AD7816 /* MetroStationAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137505D021A4A6AE00AD7816 /* MetroStationAPIManager.swift */; };
+		137505D521A4AA1800AD7816 /* MetroStationListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137505D421A4AA1800AD7816 /* MetroStationListResponse.swift */; };
+		137505D821A4B29800AD7816 /* LandmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137505D721A4B29800AD7816 /* LandmarksViewController.swift */; };
+		137505DA21A5EA7F00AD7816 /* LandmarksAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137505D921A5EA7F00AD7816 /* LandmarksAPIManager.swift */; };
+		137505DC21A5F55900AD7816 /* LandmarksListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137505DB21A5F55900AD7816 /* LandmarksListResponse.swift */; };
+		137505DE21A619B800AD7816 /* MetroStationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137505DD21A619B800AD7816 /* MetroStationsViewController.swift */; };
+		137505E321A637F900AD7816 /* MetroStationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137505E221A637F900AD7816 /* MetroStationTableViewCell.swift */; };
+		137505E521A75CE900AD7816 /* LandmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137505E421A75CE900AD7816 /* LandmarkTableViewCell.swift */; };
+		13CFD78C21A7828C00D4BC87 /* LandMarkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CFD78B21A7828C00D4BC87 /* LandMarkDetailViewController.swift */; };
+		13CFD78E21A8A86700D4BC87 /* ReviewListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CFD78D21A8A86700D4BC87 /* ReviewListResponse.swift */; };
+		13CFD79021A8C36200D4BC87 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CFD78F21A8C36200D4BC87 /* DetailTableViewCell.swift */; };
+		13CFD7D221A9FAEF00D4BC87 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CFD7D121A9FAEF00D4BC87 /* MBProgressHUD.m */; };
+		13CFD7D421AA092E00D4BC87 /* PresistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CFD7D321AA092E00D4BC87 /* PresistenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +35,21 @@
 		137505BC21A0C5EE00AD7816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		137505BF21A0C5EE00AD7816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		137505C121A0C5EE00AD7816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		137505D021A4A6AE00AD7816 /* MetroStationAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStationAPIManager.swift; sourceTree = "<group>"; };
+		137505D421A4AA1800AD7816 /* MetroStationListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStationListResponse.swift; sourceTree = "<group>"; };
+		137505D721A4B29800AD7816 /* LandmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksViewController.swift; sourceTree = "<group>"; };
+		137505D921A5EA7F00AD7816 /* LandmarksAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksAPIManager.swift; sourceTree = "<group>"; };
+		137505DB21A5F55900AD7816 /* LandmarksListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksListResponse.swift; sourceTree = "<group>"; };
+		137505DD21A619B800AD7816 /* MetroStationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStationsViewController.swift; sourceTree = "<group>"; };
+		137505E221A637F900AD7816 /* MetroStationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStationTableViewCell.swift; sourceTree = "<group>"; };
+		137505E421A75CE900AD7816 /* LandmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkTableViewCell.swift; sourceTree = "<group>"; };
+		13CFD78B21A7828C00D4BC87 /* LandMarkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandMarkDetailViewController.swift; sourceTree = "<group>"; };
+		13CFD78D21A8A86700D4BC87 /* ReviewListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListResponse.swift; sourceTree = "<group>"; };
+		13CFD78F21A8C36200D4BC87 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		13CFD7CF21A9FAEE00D4BC87 /* Metro Explorer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Metro Explorer-Bridging-Header.h"; sourceTree = "<group>"; };
+		13CFD7D021A9FAEF00D4BC87 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		13CFD7D121A9FAEF00D4BC87 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		13CFD7D321AA092E00D4BC87 /* PresistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresistenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +68,7 @@
 			children = (
 				137505B421A0C5EB00AD7816 /* Metro Explorer */,
 				137505B321A0C5EB00AD7816 /* Products */,
+				13CFD7B221A9F5C000D4BC87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +83,76 @@
 		137505B421A0C5EB00AD7816 /* Metro Explorer */ = {
 			isa = PBXGroup;
 			children = (
+				13CFD7CE21A9FAD600D4BC87 /* MBProgressHUD */,
+				137505DF21A626E400AD7816 /* cell */,
+				137505D621A4B26100AD7816 /* view */,
+				137505D321A4A9FE00AD7816 /* manager */,
+				137505D221A4A9F800AD7816 /* model */,
 				137505B521A0C5EB00AD7816 /* AppDelegate.swift */,
-				137505B721A0C5EB00AD7816 /* ViewController.swift */,
 				137505B921A0C5EB00AD7816 /* Main.storyboard */,
 				137505BC21A0C5EE00AD7816 /* Assets.xcassets */,
 				137505BE21A0C5EE00AD7816 /* LaunchScreen.storyboard */,
 				137505C121A0C5EE00AD7816 /* Info.plist */,
 			);
 			path = "Metro Explorer";
+			sourceTree = "<group>";
+		};
+		137505D221A4A9F800AD7816 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				137505D421A4AA1800AD7816 /* MetroStationListResponse.swift */,
+				137505DB21A5F55900AD7816 /* LandmarksListResponse.swift */,
+				13CFD78D21A8A86700D4BC87 /* ReviewListResponse.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		137505D321A4A9FE00AD7816 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				137505D021A4A6AE00AD7816 /* MetroStationAPIManager.swift */,
+				137505D921A5EA7F00AD7816 /* LandmarksAPIManager.swift */,
+				13CFD7D321AA092E00D4BC87 /* PresistenceManager.swift */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		137505D621A4B26100AD7816 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				137505B721A0C5EB00AD7816 /* ViewController.swift */,
+				137505D721A4B29800AD7816 /* LandmarksViewController.swift */,
+				137505DD21A619B800AD7816 /* MetroStationsViewController.swift */,
+				13CFD78B21A7828C00D4BC87 /* LandMarkDetailViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		137505DF21A626E400AD7816 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				137505E221A637F900AD7816 /* MetroStationTableViewCell.swift */,
+				137505E421A75CE900AD7816 /* LandmarkTableViewCell.swift */,
+				13CFD78F21A8C36200D4BC87 /* DetailTableViewCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		13CFD7B221A9F5C000D4BC87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		13CFD7CE21A9FAD600D4BC87 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				13CFD7CF21A9FAEE00D4BC87 /* Metro Explorer-Bridging-Header.h */,
+				13CFD7D021A9FAEF00D4BC87 /* MBProgressHUD.h */,
+				13CFD7D121A9FAEF00D4BC87 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +187,7 @@
 				TargetAttributes = {
 					137505B121A0C5EB00AD7816 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -135,8 +227,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				137505DC21A5F55900AD7816 /* LandmarksListResponse.swift in Sources */,
 				137505B821A0C5EB00AD7816 /* ViewController.swift in Sources */,
+				137505D821A4B29800AD7816 /* LandmarksViewController.swift in Sources */,
+				13CFD79021A8C36200D4BC87 /* DetailTableViewCell.swift in Sources */,
+				137505E521A75CE900AD7816 /* LandmarkTableViewCell.swift in Sources */,
+				137505E321A637F900AD7816 /* MetroStationTableViewCell.swift in Sources */,
+				137505DA21A5EA7F00AD7816 /* LandmarksAPIManager.swift in Sources */,
+				137505D521A4AA1800AD7816 /* MetroStationListResponse.swift in Sources */,
+				13CFD78C21A7828C00D4BC87 /* LandMarkDetailViewController.swift in Sources */,
+				13CFD78E21A8A86700D4BC87 /* ReviewListResponse.swift in Sources */,
+				137505DE21A619B800AD7816 /* MetroStationsViewController.swift in Sources */,
+				137505D121A4A6AE00AD7816 /* MetroStationAPIManager.swift in Sources */,
 				137505B621A0C5EB00AD7816 /* AppDelegate.swift in Sources */,
+				13CFD7D221A9FAEF00D4BC87 /* MBProgressHUD.m in Sources */,
+				13CFD7D421AA092E00D4BC87 /* PresistenceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Metro Explorer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -290,6 +396,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "heran.Metro-Explorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Metro Explorer/MBProgressHUD/Metro Explorer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,6 +408,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Metro Explorer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -307,6 +417,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "heran.Metro-Explorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Metro Explorer/MBProgressHUD/Metro Explorer-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
