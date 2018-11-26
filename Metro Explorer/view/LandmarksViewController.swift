@@ -72,6 +72,10 @@ class LandmarksViewController: UITableViewController {
 
     func fetchData()
     {
+        let loadingNotification = MBProgressHUD.showAdded(to: view, animated: true)
+        loadingNotification.mode = MBProgressHUDMode.indeterminate
+        loadingNotification.label.text = "Loading"
+        loadingNotification.isUserInteractionEnabled = false
         LandmarksAPIManager.shared.delegate = self
         LandmarksAPIManager.shared.fetchLandmarks(curStation!.Lat, curStation!.Lon)
     }
@@ -142,10 +146,11 @@ extension LandmarksViewController : FetchLandmarksDelegate
             self.tableView.insertRows(at: indexPath, with: .none)
             self.tableView.endUpdates()
         }
+        MBProgressHUD.hide(for: self.view, animated: true)
     }
     
     func landmarksNotFound() {
-        
+        MBProgressHUD.hide(for: self.view, animated: true)
     }
 
 }

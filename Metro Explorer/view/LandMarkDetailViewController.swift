@@ -148,7 +148,7 @@ extension LandMarkDetailViewController : FetchReviewDelegate
     }
     
     func reviewNotFound() {
-        
+        MBProgressHUD.hide(for: self.detailTableView, animated: true)
     }
     
 }
