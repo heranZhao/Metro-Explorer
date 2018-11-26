@@ -29,7 +29,7 @@ class LandmarksAPIManager
     
     let key = "O6gR3nENQ_oKgJC95koDDXfIF1M9IGL5IoblFYiDAyc7tqtKsAzL5JSbkEfbeXq8h1U8h0YA0UcH9jbcKnI1VRTffV1gJDub4NZHdpeuiBA0a436s_eyqSp6yrT1W3Yx"
     
-    func fetchLandmarks(_ lat : Double, _ lon : Double, _ limit : Int, _ offset : Int)
+    func fetchLandmarks(_ lat : Double, _ lon : Double)
     {
         
         var urlComponents = URLComponents(string: "https://api.yelp.com/v3/businesses/search")!
@@ -38,8 +38,8 @@ class LandmarksAPIManager
             URLQueryItem(name: "term", value: "landmark"),
             URLQueryItem(name: "latitude", value: "\(lat)"),
             URLQueryItem(name: "longitude", value: "\(lon)"),
-            URLQueryItem(name: "limit", value: "\(limit)"),
-            URLQueryItem(name: "offset", value: "\(offset)")
+            URLQueryItem(name: "sort_by", value: "rating"),
+            URLQueryItem(name: "limit", value: "10")
         ]
         
         let url = urlComponents.url!

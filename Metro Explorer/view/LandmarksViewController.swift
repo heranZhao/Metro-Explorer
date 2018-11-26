@@ -14,8 +14,6 @@ class LandmarksViewController: UITableViewController {
     let TAG = "LandmarksViewController"
 
     private var curStation : Station?
-    private var limit = 15
-    private var offset = 0
     private var landmarkList : [Businesses] = []
     //let refreshControl = UIRefreshControl()
     
@@ -75,7 +73,7 @@ class LandmarksViewController: UITableViewController {
     func fetchData()
     {
         LandmarksAPIManager.shared.delegate = self
-        LandmarksAPIManager.shared.fetchLandmarks(curStation!.Lat, curStation!.Lon, limit, offset)
+        LandmarksAPIManager.shared.fetchLandmarks(curStation!.Lat, curStation!.Lon)
     }
     
     // MARK: - Table view data source
@@ -122,17 +120,6 @@ class LandmarksViewController: UITableViewController {
             vc.imgData = selectLandmarkImgData
         }
     }
-    
-    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let endScrolling = scrollView.contentOffset.y + scrollView.frame.size.height;
-        if (endScrolling >= scrollView.contentSize.height)
-        {
-            if( type == LandmarkViewType.Nearest || type == LandmarkViewType.Selected)
-            {
-                fetchData()
-            }
-        }
-    }
 
 }
 
@@ -150,7 +137,6 @@ extension LandmarksViewController : FetchLandmarksDelegate
         }
         
         landmarkList = landmarkList + LandmarksAPIManager.shared.landmarkList
-        offset = offset  + limit
         DispatchQueue.main.async {
             self.tableView.beginUpdates()
             self.tableView.insertRows(at: indexPath, with: .none)
