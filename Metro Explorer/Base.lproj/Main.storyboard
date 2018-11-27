@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metro Exploer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueU-XE-I4d">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metro Exploer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueU-XE-I4d">
                                 <rect key="frame" x="0.0" y="64" width="375" height="367"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="57"/>
@@ -231,6 +231,7 @@
                                                 <constraint firstItem="W3Q-jn-jlp" firstAttribute="top" secondItem="Znh-mV-ys0" secondAttribute="bottom" id="38k-C0-CVj"/>
                                                 <constraint firstItem="Znh-mV-ys0" firstAttribute="trailing" secondItem="nHO-Bg-d9R" secondAttribute="trailingMargin" id="GDx-1H-N54"/>
                                                 <constraint firstItem="W3Q-jn-jlp" firstAttribute="trailing" secondItem="nHO-Bg-d9R" secondAttribute="trailingMargin" id="MhL-KS-rRT"/>
+                                                <constraint firstItem="W3Q-jn-jlp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nHO-Bg-d9R" secondAttribute="leading" constant="20" symbolic="YES" id="ck0-go-cXv"/>
                                                 <constraint firstItem="W3Q-jn-jlp" firstAttribute="bottom" secondItem="nHO-Bg-d9R" secondAttribute="bottomMargin" id="nr9-Zl-oBb"/>
                                                 <constraint firstItem="Znh-mV-ys0" firstAttribute="top" secondItem="nHO-Bg-d9R" secondAttribute="topMargin" id="wKJ-8v-29v"/>
                                             </constraints>

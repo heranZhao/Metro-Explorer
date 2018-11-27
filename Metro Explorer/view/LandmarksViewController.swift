@@ -67,7 +67,7 @@ class LandmarksViewController: UITableViewController {
             landmarkList = PersistenceManager.sharedInstance.fetchFavoriteBusinesses()
             self.tableView.reloadData()
         }
-        
+        tableView.tableFooterView = UIView()
     }
 
     func fetchData()

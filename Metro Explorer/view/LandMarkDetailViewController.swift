@@ -76,6 +76,7 @@ class LandMarkDetailViewController: UIViewController {
             favoriteBtn.image = UIImage(named: "favorite_outline")
         }
         
+        detailTableView.tableFooterView = UIView()
     }
     
     @IBAction func favoriteBtnPressed(_ sender: Any)

@@ -25,6 +25,7 @@ class MetroStationsViewController: UITableViewController {
         MetroStationAPIManager.shared.delegate = self
         MetroStationAPIManager.shared.fetchStations()
         //let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        tableView.tableFooterView = UIView()
         
         let loadingNotification = MBProgressHUD.showAdded(to: view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.indeterminate
@@ -38,8 +39,6 @@ class MetroStationsViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
-    //- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
