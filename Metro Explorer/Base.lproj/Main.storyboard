@@ -312,25 +312,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MetroStationTableViewCell" rowHeight="105" id="ddM-Yp-0qK" customClass="MetroStationTableViewCell" customModule="Metro_Explorer" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="105"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MetroStationTableViewCell" rowHeight="110" id="ddM-Yp-0qK" customClass="MetroStationTableViewCell" customModule="Metro_Explorer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ddM-Yp-0qK" id="F8Q-Vj-DLC">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="104.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUq-vA-ISz">
-                                            <rect key="frame" x="16" y="11" width="343" height="32"/>
+                                            <rect key="frame" x="16" y="11" width="343" height="40"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="32" id="AVl-BH-lQB"/>
+                                                <constraint firstAttribute="height" constant="40" id="AVl-BH-lQB"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKQ-lr-yLc">
-                                            <rect key="frame" x="16" y="43" width="343" height="51"/>
+                                            <rect key="frame" x="36" y="51" width="323" height="58.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="58.5" id="H7o-vU-dcy"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -342,8 +345,8 @@
                                         <constraint firstItem="CUq-vA-ISz" firstAttribute="leading" secondItem="F8Q-Vj-DLC" secondAttribute="leadingMargin" id="B7O-VB-phO"/>
                                         <constraint firstItem="WKQ-lr-yLc" firstAttribute="top" secondItem="CUq-vA-ISz" secondAttribute="bottom" id="C7v-ZL-Vis"/>
                                         <constraint firstItem="WKQ-lr-yLc" firstAttribute="trailing" secondItem="F8Q-Vj-DLC" secondAttribute="trailingMargin" id="Hgd-id-v6e"/>
-                                        <constraint firstItem="WKQ-lr-yLc" firstAttribute="bottom" secondItem="F8Q-Vj-DLC" secondAttribute="bottomMargin" id="RfV-YJ-zqU"/>
-                                        <constraint firstItem="WKQ-lr-yLc" firstAttribute="leading" secondItem="F8Q-Vj-DLC" secondAttribute="leadingMargin" id="dVk-3s-az8"/>
+                                        <constraint firstItem="WKQ-lr-yLc" firstAttribute="bottom" secondItem="F8Q-Vj-DLC" secondAttribute="bottom" id="RfV-YJ-zqU"/>
+                                        <constraint firstItem="WKQ-lr-yLc" firstAttribute="leading" secondItem="F8Q-Vj-DLC" secondAttribute="leadingMargin" constant="20" id="dVk-3s-az8"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -363,7 +366,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y20-Gs-OKz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="921"/>
+            <point key="canvasLocation" x="1076" y="920.68965517241384"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="o4P-Jj-CGc">

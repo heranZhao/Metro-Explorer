@@ -116,14 +116,15 @@ class LandmarksAPIManager
             
             do {
                 let reviewListResponse = try decoder.decode(ReviewListResponse.self, from: data)
+                
                 self.reviewList = reviewListResponse.reviews
                 self.reviewDelegate?.reviewFound()
             } catch let error {
                 
                 print("codable failed - bad data format")
                 print(error.localizedDescription)
-                
-                self.reviewDelegate?.reviewNotFound()
+                self.reviewList = [Reviews]()
+                self.reviewDelegate?.reviewFound()
             }
         }
         task.resume()

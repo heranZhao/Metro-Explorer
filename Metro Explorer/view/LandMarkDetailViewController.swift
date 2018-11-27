@@ -38,7 +38,7 @@ class LandMarkDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = landmark?.name
+        self.navigationItem.title = "Detail"
         
         
         guard let landmark = landmark else
@@ -144,11 +144,33 @@ extension LandMarkDetailViewController : FetchReviewDelegate
         DispatchQueue.main.async {
             self.detailTableView.reloadData()
             MBProgressHUD.hide(for: self.detailTableView, animated: true)
+            
+            if(self.reviewList.count == 0)
+            {
+                let message = "No Reviews Found."
+                let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+                self.present(alert, animated: true)
+                let duration: Double = 1.5
+                
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
+                    alert.dismiss(animated: true)
+                }
+            }
         }
     }
     
     func reviewNotFound() {
-        MBProgressHUD.hide(for: self.detailTableView, animated: true)
+        DispatchQueue.main.async {
+            MBProgressHUD.hide(for: self.detailTableView, animated: true)
+            let message = "Network Error, please try again later."
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            self.present(alert, animated: true)
+            let duration: Double = 1.5
+            
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
+                alert.dismiss(animated: true)
+            }
+        }
     }
     
 }

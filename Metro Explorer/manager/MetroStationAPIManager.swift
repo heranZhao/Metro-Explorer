@@ -49,7 +49,6 @@ class MetroStationAPIManager
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             //PUT CODE HERE TO RUN UPON COMPLETION
-            print("request complete")
             
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                 print("response is nil or 200")
@@ -85,7 +84,6 @@ class MetroStationAPIManager
             }
         }
         
-        print("execute request")
         task.resume()
     }
     

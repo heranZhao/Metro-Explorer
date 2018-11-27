@@ -145,12 +145,23 @@ extension LandmarksViewController : FetchLandmarksDelegate
             self.tableView.beginUpdates()
             self.tableView.insertRows(at: indexPath, with: .none)
             self.tableView.endUpdates()
+            MBProgressHUD.hide(for: self.view, animated: true)
         }
-        MBProgressHUD.hide(for: self.view, animated: true)
     }
     
     func landmarksNotFound() {
-        MBProgressHUD.hide(for: self.view, animated: true)
+        DispatchQueue.main.async {
+            MBProgressHUD.hide(for: self.view, animated: true)
+            let message = "Network Error, please try again later."
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            self.present(alert, animated: true)
+            let duration: Double = 1.5
+            
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
+                alert.dismiss(animated: true)
+            }
+        }
+        
     }
 
 }

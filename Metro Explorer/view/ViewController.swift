@@ -27,19 +27,6 @@ class ViewController: UIViewController {
         getLocation = false
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-
-    }
-    
-    //override func view
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        //isFinding = false
-    }
-    
     @IBAction func favoriteButtonPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "nearestSegue", sender: "Favorite")
 
@@ -48,7 +35,6 @@ class ViewController: UIViewController {
         
         if(!isFinding)
         {
-            print("click")
             isFinding = true
             locationManager = CLLocationManager()
             locationManager.delegate = self
@@ -92,7 +78,6 @@ extension ViewController: CLLocationManagerDelegate
         curLon = userLocation.coordinate.longitude
         curLat = userLocation.coordinate.latitude
         
-        print("get location")
         if(!getLocation)
         {
             getLocation = true
@@ -125,5 +110,15 @@ extension ViewController : FetchStationsDelegate
     func stationNotFound() {
         isFinding = false
         getLocation = false
+        DispatchQueue.main.async {
+            let message = "Network Error, please try again later."
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            self.present(alert, animated: true)
+            let duration: Double = 1.5
+            
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
+                alert.dismiss(animated: true)
+            }
+        }
     }
 }
