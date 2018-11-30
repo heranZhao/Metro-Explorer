@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreLocation
+import MapKit
+import CoreLocation
+import Contacts
 
 class LandMarkDetailViewController: UIViewController {
     
@@ -79,6 +82,49 @@ class LandMarkDetailViewController: UIViewController {
         detailTableView.tableFooterView = UIView()
     }
     
+    @IBAction func mapBtnPressed(_ sender: Any) {
+        guard let landmark = landmark else
+        {
+            return
+        }
+        let geocoder = CLGeocoder()
+        
+        let locationString = landmark.location.display_address.joined(separator: " ")
+        
+        geocoder.geocodeAddressString(locationString) { (placemarks, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                if let location = placemarks?.first?.location {
+                    
+                    let mapItem = MKMapItem.forCurrentLocation()
+                    
+                    let coords2 = CLLocationCoordinate2D(latitude: location.coordinate.latitude,longitude: location.coordinate.longitude)
+                    let addressDict2 =
+                        [CNPostalAddressStreetKey: landmark.location.address1,
+                         CNPostalAddressCityKey: landmark.location.city,
+                         CNPostalAddressStateKey: landmark.location.state,
+                         CNPostalAddressPostalCodeKey: landmark.location.zip_code]
+                    //item2
+                    let place2 = MKPlacemark(coordinate: coords2,
+                                             addressDictionary: addressDict2)
+                    let mapItem2 = MKMapItem(placemark: place2)
+                    
+                    //-----
+                    //launch it
+                    let options = [MKLaunchOptionsDirectionsModeKey:
+                        MKLaunchOptionsDirectionsModeDriving]
+                    
+                    //for 1 only.
+                    //mapItem.openInMaps(launchOptions: options)
+                    //for 1 or N items
+                    let mapItems = [mapItem, mapItem2] //src to destination
+                    MKMapItem.openMaps(with:mapItems, launchOptions: options)
+                    
+                }
+            }
+        }
+    }
     @IBAction func favoriteBtnPressed(_ sender: Any)
     {
         guard let landmark = landmark else

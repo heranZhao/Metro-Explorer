@@ -288,6 +288,11 @@
                                     <action selector="favoriteBtnPressed:" destination="BaI-bR-ZZL" id="fyK-8L-sHe"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem title="Item" image="map" id="t8p-sd-8X2">
+                                <connections>
+                                    <action selector="mapBtnPressed:" destination="BaI-bR-ZZL" id="kkh-C8-6RM"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -394,6 +399,7 @@
     </scenes>
     <resources>
         <image name="favorite" width="30" height="30"/>
+        <image name="map" width="25.600000381469727" height="25.600000381469727"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="KwE-dy-5eI"/>
