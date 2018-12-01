@@ -45,6 +45,18 @@ class ViewController: UIViewController {
             {
                 locationManager.requestLocation()
             }
+            else
+            {
+                let message = "Please check your network or location setting."
+                let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+                self.present(alert, animated: true)
+                let duration: Double = 1.5
+                
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
+                    alert.dismiss(animated: true)
+                }
+                isFinding = false
+            }
         }
     }
     
@@ -90,6 +102,16 @@ extension ViewController: CLLocationManagerDelegate
         print(error)
         isFinding = false
         getLocation = false
+        
+        let message = "Please allow the location permission in setting."
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        self.present(alert, animated: true)
+        let duration: Double = 1.5
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
+            alert.dismiss(animated: true)
+        }
+        isFinding = false
     }
 }
 
