@@ -25,11 +25,8 @@ class LandmarksViewController: UITableViewController {
     }
     
     var type = LandmarkViewType.Nearest
-//    enum SourceType{
-//        Nearest = 0,
-//        
-//    }
-    
+
+    //used to handle the view changed from detail view back to this view
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -51,25 +48,30 @@ class LandmarksViewController: UITableViewController {
         selectLandmarkImgData = nil
     }
     
+    
+    //load the view base on the view type
     override func viewDidLoad() {
         super.viewDidLoad()
         curStation = MetroStationAPIManager.shared.selectedStation
         switch type
         {
         case .Nearest:
-            self.navigationItem.title = curStation?.Name
+            self.navigationItem.title = "Landmarks"
             fetchData()
         case .Selected:
-            self.navigationItem.title = curStation?.Name
+            self.navigationItem.title = "Landmarks"
             fetchData()
         case .Favorite:
             self.navigationItem.title = "Favorite Landmarks"
             landmarkList = PersistenceManager.sharedInstance.fetchFavoriteBusinesses()
             self.tableView.reloadData()
         }
+        
+        //hide the rest unused table cells
         tableView.tableFooterView = UIView()
     }
-
+    
+    // used to fectch data by using API and load the progress view
     func fetchData()
     {
         let loadingNotification = MBProgressHUD.showAdded(to: view, animated: true)
@@ -116,6 +118,7 @@ class LandmarksViewController: UITableViewController {
         performSegue(withIdentifier: "detailSegue", sender: nil)
     }
     
+    //used to set the target landmark for the next detail view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailSegue"{
             let vc = segue.destination as! LandMarkDetailViewController
@@ -130,6 +133,7 @@ class LandmarksViewController: UITableViewController {
 
 extension LandmarksViewController : FetchLandmarksDelegate
 {
+    //when the landmarks return successfully, it will update the tabelview and hide the progress view
     func landmarksFound() {
 
         let newSize = LandmarksAPIManager.shared.landmarkList.count - 1
@@ -149,6 +153,7 @@ extension LandmarksViewController : FetchLandmarksDelegate
         }
     }
     
+    //if the landmark return failed, it will pop out a nitification
     func landmarksNotFound() {
         DispatchQueue.main.async {
             MBProgressHUD.hide(for: self.view, animated: true)

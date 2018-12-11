@@ -13,6 +13,7 @@ class PersistenceManager {
     
     let businessesKey = "Business"
     
+    //save the landmark to the list
     func saveWorkout(business: Businesses) {
         let userDefaults = UserDefaults.standard
         
@@ -31,7 +32,7 @@ class PersistenceManager {
         userDefaults.set(encodedBusinesses, forKey: businessesKey)
     }
     
-    
+    //load the data and build the list
     func fetchFavoriteBusinesses() -> [Businesses] {
         let userDefaults = UserDefaults.standard
         
@@ -43,6 +44,7 @@ class PersistenceManager {
         }
     }
     
+    //delete a landmark from the favorite list if it exist
     func unCheckFavorite(business: Businesses)
     {
         var savedList = fetchFavoriteBusinesses()
@@ -59,6 +61,7 @@ class PersistenceManager {
         userDefaults.set(encodedBusinesses, forKey: businessesKey)
     }
     
+    //by giving a landmarl, check if it's already in the favorite list
     func checkIsFavorite(business: Businesses) -> Bool
     {
         let savedList = fetchFavoriteBusinesses()

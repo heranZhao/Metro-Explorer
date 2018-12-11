@@ -15,7 +15,10 @@ class ViewController: UIViewController {
     var curLon : Double = 0
     var curLat: Double = 0
     
+    //used to identified the current process is finding or not
     var isFinding = false
+    
+    //used to see if the current location has already been set
     var getLocation = false
     
     let TAG = "ViewController"
@@ -33,6 +36,7 @@ class ViewController: UIViewController {
     }
     @IBAction func nearestButtonPressed(_ sender: Any) {
         
+        //if the current process is not find the nearest metro station, then find it
         if(!isFinding)
         {
             isFinding = true
@@ -47,6 +51,7 @@ class ViewController: UIViewController {
             }
             else
             {
+                // can't get the user's current location successfully
                 let message = "Please check your network or location setting."
                 let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
                 self.present(alert, animated: true)
@@ -61,7 +66,7 @@ class ViewController: UIViewController {
     }
     
     
-    
+    //set the button pressed type of next view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "nearestSegue"{
             
@@ -83,6 +88,7 @@ class ViewController: UIViewController {
 
 extension ViewController: CLLocationManagerDelegate
 {
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation:CLLocation = locations[0] as CLLocation
         manager.stopUpdatingLocation()
@@ -117,6 +123,8 @@ extension ViewController: CLLocationManagerDelegate
 
 extension ViewController : FetchStationsDelegate
 {
+    
+    //get the nearest metro station if the user get the metro station list successfully
     func stationFound()
     {
         MetroStationAPIManager.shared.setNearestStation(curLat, curLon)

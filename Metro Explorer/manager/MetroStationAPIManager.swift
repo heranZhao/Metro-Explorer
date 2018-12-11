@@ -29,12 +29,6 @@ class MetroStationAPIManager
     var delegate: FetchStationsDelegate?
     
     func fetchStations() {
-        
-//        if(self.stationList.count > 0)
-//        {
-//            self.delegate?.stationFound()
-//            return
-//        }
 
         var urlComponents = URLComponents(string: "https://api.wmata.com/Rail.svc/json/jStations")!
         
@@ -87,6 +81,8 @@ class MetroStationAPIManager
         task.resume()
     }
     
+    
+    //used to calculate the distance by gaven two points
     func distance(_ lat1 : Double, _ lon1 : Double, _ lat2 : Double, _ lon2 : Double) -> Double
     {
         let p = 0.017453292519943295
@@ -96,6 +92,7 @@ class MetroStationAPIManager
         return 12742 * asin(sqrt(a))
     }
     
+    //get the nearest metro station base on user current location
     func setNearestStation(_ lat1 : Double, _ lon1 : Double)
     {
         var dis = 99999999999.0;

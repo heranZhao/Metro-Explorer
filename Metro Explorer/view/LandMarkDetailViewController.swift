@@ -58,6 +58,8 @@ class LandMarkDetailViewController: UIViewController {
             landmarkImg.image = UIImage(data: data)
         }
         
+        
+        //set the progress view for the reviews load process
         let loadingNotification = MBProgressHUD.showAdded(to: detailTableView, animated: true)
         loadingNotification.mode = MBProgressHUDMode.indeterminate
         loadingNotification.label.text = "Loading"
@@ -82,6 +84,8 @@ class LandMarkDetailViewController: UIViewController {
         detailTableView.tableFooterView = UIView()
     }
     
+    
+    // used to set the parameter and open apple map to give navigation
     @IBAction func mapBtnPressed(_ sender: Any) {
         guard let landmark = landmark else
         {
@@ -105,19 +109,15 @@ class LandMarkDetailViewController: UIViewController {
                          CNPostalAddressCityKey: landmark.location.city,
                          CNPostalAddressStateKey: landmark.location.state,
                          CNPostalAddressPostalCodeKey: landmark.location.zip_code]
-                    //item2
-                    let place2 = MKPlacemark(coordinate: coords2,
-                                             addressDictionary: addressDict2)
-                    let mapItem2 = MKMapItem(placemark: place2)
                     
-                    //-----
-                    //launch it
+                    //create the target map item
+                    let place2 = MKPlacemark(coordinate: coords2,
+                                             addressDictionary: addressDict2 as [String : Any])
+                    let mapItem2 = MKMapItem(placemark: place2)
+
                     let options = [MKLaunchOptionsDirectionsModeKey:
                         MKLaunchOptionsDirectionsModeDriving]
-                    
-                    //for 1 only.
-                    //mapItem.openInMaps(launchOptions: options)
-                    //for 1 or N items
+
                     let mapItems = [mapItem, mapItem2] //src to destination
                     MKMapItem.openMaps(with:mapItems, launchOptions: options)
                     

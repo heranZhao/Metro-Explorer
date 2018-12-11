@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import MBProgressHUD
 
 class MetroStationsViewController: UITableViewController {
 
@@ -24,7 +23,6 @@ class MetroStationsViewController: UITableViewController {
         super.viewDidLoad()
         MetroStationAPIManager.shared.delegate = self
         MetroStationAPIManager.shared.fetchStations()
-        //let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
         tableView.tableFooterView = UIView()
         
         let loadingNotification = MBProgressHUD.showAdded(to: view, animated: true)
@@ -69,6 +67,7 @@ class MetroStationsViewController: UITableViewController {
         performSegue(withIdentifier: "landmarkSegue", sender: self)
     }
     
+    //update the table view and hide the progress view
     func setStationList()
     {
         stationList = MetroStationAPIManager.shared.stationList

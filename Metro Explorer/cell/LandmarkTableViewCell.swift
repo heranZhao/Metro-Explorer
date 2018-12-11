@@ -20,13 +20,10 @@ class LandmarkTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func setURL(_ url: String)
@@ -45,12 +42,11 @@ class LandmarkTableViewCell: UITableViewCell {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
     
+    
+    //load the image data
     func downloadImage(from url: URL) {
-        //print("Download Started")
         getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
-            //print(self.landmarkName.text)
-            //print("Download Finished")
             DispatchQueue.main.async() {
                 self.landmarkImg.image = UIImage(data: data)
                 self.data = data

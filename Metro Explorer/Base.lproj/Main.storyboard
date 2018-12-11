@@ -275,6 +275,7 @@
                         <viewLayoutGuide key="safeArea" id="zkc-Zv-LxM"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="wHU-dz-AAh">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="696-vm-B23"/>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="action" id="8aw-lB-IZ3">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -402,6 +403,6 @@
         <image name="map" width="25.600000381469727" height="25.600000381469727"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KwE-dy-5eI"/>
+        <segue reference="GAb-Qq-2tm"/>
     </inferredMetricsTieBreakers>
 </document>
