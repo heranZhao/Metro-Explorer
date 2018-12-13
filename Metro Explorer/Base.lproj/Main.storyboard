@@ -70,9 +70,9 @@
                             <constraint firstItem="ueU-XE-I4d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4NM-mh-tQw"/>
                             <constraint firstItem="ueU-XE-I4d" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.55" id="6iz-Sb-kqm"/>
                             <constraint firstItem="wkw-5I-6tp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9iT-kI-3sb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ueU-XE-I4d" secondAttribute="trailing" id="IVf-uX-7Te"/>
+                            <constraint firstAttribute="trailing" secondItem="ueU-XE-I4d" secondAttribute="trailing" id="IVf-uX-7Te"/>
                             <constraint firstItem="wkw-5I-6tp" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="M8G-TK-eeO"/>
-                            <constraint firstItem="ueU-XE-I4d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MMP-re-Rd4"/>
+                            <constraint firstItem="ueU-XE-I4d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MMP-re-Rd4"/>
                             <constraint firstItem="wkw-5I-6tp" firstAttribute="top" secondItem="ueU-XE-I4d" secondAttribute="bottom" id="mNO-mg-tqH"/>
                             <constraint firstItem="wkw-5I-6tp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xMO-f7-7Ez"/>
                         </constraints>
